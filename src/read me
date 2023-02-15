@@ -1,0 +1,297 @@
+"""
+"""
+a
+
+read me tests
+
+
+this project run on wmlce env
+
+first we should remove json files from the dataset because it just use images
+that would produce an error in data preparation
+
+
+
+generate semantic images from pre-trained model:
+
+python main.py --g_pretrained_model models/checkpoints/g/cp-007000.ckpt --d_pretrained_model models/checkpoints/d/cp-007000.ckpt
+
+
+
+generate json annotation file from semantic images
+
+we should put the output from previous command like this structure../path_to_src_or_dst/category
+and pass --semantic_images_folder as parameter
+
+or directly with default value .
+python src/postProcessing.py
+
+python src/postProcessing.py 
+--semantic_images_folder "data/output_semantic_images_base"
+ --destination_path "data/postprocessed_pretraied
+
+
+this will generate images and put it in post process folder
+
+
+generate wireframe images from json
+
+  python prototypeGenerator.py --font_path complete_path_to_font_ttf_file
+
+  python src/prototypeGenerator.py --font_path resources/fonts/DroidSans.ttf 
+
+
+
+----------
+
+training again 
+
+
+
+
+python main.py  --train
+ 
+500
+Start Training
+epoch: 5000
+2022-11-18 05:25:52.705508: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2022-11-18 05:25:52.725261: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 3299990000 Hz
+epoch 0/5000 (137.77 sec):, d_loss 75.2256, gp_loss 246.2020, g_loss -194.2586
+epoch 10/5000 (132.83 sec):, d_loss 729.8663, gp_loss 1119.4651, g_loss 4.1628
+epoch 20/5000 (133.01 sec):, d_loss 2764.7456, gp_loss 3376.9551, g_loss -109.0822
+epoch 30/5000 (133.38 sec):, d_loss 234.5625, gp_loss 543.1774, g_loss -168.9670
+epoch 40/5000 (133.46 sec):, d_loss 13296.8994, gp_loss 13311.5957, g_loss 905.4469
+epoch 50/5000 (133.25 sec):, d_loss -10.9828, gp_loss 191.9092, g_loss -570.8698
+epoch 60/5000 (133.52 sec):, d_loss 26655.6855, gp_loss 25498.2715, g_loss 4465.2192
+epoch 70/5000 (133.85 sec):, d_loss 14398.1211, gp_loss 14807.1826, g_loss -96.6627
+epoch 80/5000 (133.89 sec):, d_loss 20820.0508, gp_loss 21460.0977, g_loss -114.6299
+epoch 90/5000 (132.94 sec):, d_loss 9924.4072, gp_loss 10296.3174, g_loss -748.5940
+epoch 100/5000 (133.77 sec):, d_loss 99411.8750, gp_loss 100749.7578, g_loss 16033.1836
+epoch 110/5000 (133.58 sec):, d_loss 3795384.0000, gp_loss 3789715.5000, g_loss 57325.4453
+epoch 120/5000 (133.61 sec):, d_loss 400042.4688, gp_loss 401370.9375, g_loss 7568.3926
+epoch 130/5000 (134.08 sec):, d_loss 9176.2051, gp_loss 9337.6455, g_loss -2183.4717
+epoch 140/5000 (133.85 sec):, d_loss 1986573.6250, gp_loss 1966556.2500, g_loss -6404.0020
+epoch 150/5000 (133.32 sec):, d_loss 3778838.5000, gp_loss 3755615.5000, g_loss -23096.6641
+epoch 160/5000 (133.57 sec):, d_loss 1211156.1250, gp_loss 1211890.8750, g_loss 8095.1592
+epoch 170/5000 (133.82 sec):, d_loss 4458.6548, gp_loss 5149.1162, g_loss -721.6465
+epoch 180/5000 (133.55 sec):, d_loss 26481.7246, gp_loss 27246.1523, g_loss 3030.9839
+epoch 190/5000 (133.97 sec):, d_loss 26050.5762, gp_loss 29269.2305, g_loss -14017.2637
+epoch 200/5000 (133.92 sec):, d_loss 53023.3359, gp_loss 51708.3281, g_loss -15484.5928
+epoch 210/5000 (133.42 sec):, d_loss 97948.2656, gp_loss 97994.5312, g_loss 16301.1650
+epoch 220/5000 (133.92 sec):, d_loss 9912.8340, gp_loss 10626.0957, g_loss 19466.1250
+epoch 230/5000 (133.81 sec):, d_loss 4410.1641, gp_loss 5529.4980, g_loss 20517.5645
+epoch 240/5000 (133.78 sec):, d_loss 19171.1758, gp_loss 23051.8789, g_loss -2345.2690
+epoch 250/5000 (133.11 sec):, d_loss 1863.5554, gp_loss 2171.6765, g_loss -10091.8418
+epoch 260/5000 (134.09 sec):, d_loss 49259.2148, gp_loss 49962.0117, g_loss -51073.4922
+epoch 270/5000 (133.49 sec):, d_loss -3133.4941, gp_loss 27412.4434, g_loss -6764.5605
+epoch 280/5000 (133.42 sec):, d_loss -92888.8984, gp_loss 8417.3994, g_loss 502774.2188
+epoch 290/5000 (134.13 sec):, d_loss -3670.4265, gp_loss 883.8547, g_loss 257181.1875
+epoch 300/5000 (133.67 sec):, d_loss 842.4944, gp_loss 647.7444, g_loss 25743.1660
+epoch 310/5000 (134.17 sec):, d_loss 105.6478, gp_loss 517.8353, g_loss -214243.0938
+epoch 320/5000 (133.60 sec):, d_loss 4492.6270, gp_loss 7292.3770, g_loss -890124.8750
+epoch 330/5000 (133.85 sec):, d_loss 443.1336, gp_loss 452.3055, g_loss -598400.6250
+epoch 340/5000 (133.63 sec):, d_loss -5.2920, gp_loss 24.8487, g_loss 156862.1719
+epoch 350/5000 (133.92 sec):, d_loss 310.4696, gp_loss 80.6258, g_loss 30166.3750
+epoch 360/5000 (134.18 sec):, d_loss -440608.7188, gp_loss 3878.7837, g_loss -3736634.5000
+epoch 370/5000 (133.85 sec):, d_loss 967.2753, gp_loss 1032.4315, g_loss 108734.1641
+epoch 380/5000 (133.50 sec):, d_loss 248.1839, gp_loss 379.9456, g_loss 120350.7969
+epoch 390/5000 (133.62 sec):, d_loss 45.1105, gp_loss 12.0480, g_loss 894664.8750
+epoch 400/5000 (133.56 sec):, d_loss 124.0996, gp_loss 599.7871, g_loss 275720.3125
+epoch 410/5000 (133.69 sec):, d_loss 253.7209, gp_loss 161.1584, g_loss -451016.0625
+epoch 420/5000 (133.79 sec):, d_loss 1434287.5000, gp_loss 916708.5000, g_loss 4994383.0000
+epoch 430/5000 (133.64 sec):, d_loss 6300906.5000, gp_loss 6293240.5000, g_loss -9531242.0000
+epoch 440/5000 (133.54 sec):, d_loss -33740.7188, gp_loss 18475.0312, g_loss 1834666.7500
+epoch 450/5000 (133.84 sec):, d_loss 45693.9844, gp_loss 45054.7344, g_loss -3458657.5000
+epoch 460/5000 (134.00 sec):, d_loss -1739.9656, gp_loss 554.7845, g_loss 1155178.7500
+epoch 470/5000 (134.19 sec):, d_loss 729.2122, gp_loss 427.3059, g_loss 125467.4844
+epoch 480/5000 (134.54 sec):, d_loss nan, gp_loss nan, g_loss nan
+epoch 490/5000 (133.64 sec):, d_loss nan, gp_loss nan, g_loss nan
+epoch 500/5000 (133.83 sec):, d_loss nan, gp_loss nan, g_loss nan
+
+
+restart tranining from pretrainnedd moedl :
+
+python main.py --train --restore_model
+
+epoch 7000/15000 (136.94 sec):, d_loss 317164.3438, gp_loss 315236.5000, g_loss 16439.3262
+epoch 7010/15000 (136.96 sec):, d_loss 2567.3503, gp_loss 2388.5088, g_loss -411.5273
+epoch 7020/15000 (136.64 sec):, d_loss nan, gp_loss nan, g_loss nan
+epoch 7030/15000 (136.72 sec):, d_loss nan, gp_loss nan, g_loss nan
+epoch 7040/15000 (136.21 sec):, d_loss nan, gp_loss nan, g_loss nan
+epoch 7050/15000 (137.04 sec):, d_loss nan, gp_loss nan, g_loss nan
+
+train by changing the inout folder to train_images instead of train semantic
+
+python main.py --train --restore_model --data_path ./data/train_images
+
+
+
+
+
+Spectral normalization is a technique used to stabilize the training of Generative Adversarial Networks (GANs). In GANs, the generator network is trained to produce samples that are similar to a set of real-world examples (the training data), while the discriminator network is trained to determine whether a given sample is real or generated. The goal is to find a equilibrium state where the generator produces samples that the discriminator cannot distinguish from real samples.
+
+Spectral normalization is a way to constrain the Lipschitz constant of the discriminator's mapping function by normalizing the weight matrices of the discriminator's layers. This can help stabilize the training by preventing the discriminator from becoming too powerful and overpowering the generator. It's also used to prevent mode collapse which is a common problem in GANs where generator produces only few modes of the data distribution.
+
+In summary, Spectral Normalization is a technique that is used to constrain the Lipschitz constant of the discriminator's mapping function, thus stabilize the training of GANs and prevent mode collapse.
+
+
+The gradient_penalty method is used as a regularization term in the loss function for training the discriminator network. The method is used to enforce the Lipschitz constraint on the discriminator, which helps to stabilize the training process.
+
+The method takes in three arguments: real, fake, and label. real and fake are batches of real and fake images, respectively, and label is the corresponding labels for the images.
+
+The method first creates a random alpha value between 0 and 1 for each image in the batch. It then interpolates between the real and fake images using this alpha value. The interpolated images are passed through the discriminator network, and the gradient of the output logit with respect to the interpolated images is computed using a GradientTape. The norm of this gradient is calculated, and the difference between the norm and 1 is squared and multiplied by the gradient penalty lambda (self.gpl) value. The mean of this value is returned as the gradient penalty.
+
+During training, this penalty term is added to the loss function for the discriminator, encouraging the discriminator to produce similar output for real and fake images that are close in the input space, thus enforcing the Lipschitz constraint.
+
+
+
+
+what is the  Lipschitz constraint 
+In the context of GANs, a Lipschitz constraint is a restriction placed on the discriminator network to ensure that its output changes smoothly as the input changes. More formally, it requires that the absolute difference between the output of the discriminator for any two input images is bounded by the Lipschitz constant, which is the distance between the two input images.
+
+This constraint helps to stabilize the training process of GANs by preventing the discriminator from becoming too confident in its predictions, which can cause the generator to produce poor quality images.
+
+The Lipschitz constraint is enforced by adding a regularization term to the loss function for the discriminator, which penalizes the network when the Lipschitz constraint is violated. One common method for enforcing the Lipschitz constraint is the gradient penalty, which is the method used in this code. It penalizes the discriminator when the gradient of its output with respect to the input is too large, which indicates that the output is changing too rapidly as the input changes.
+
+
+differecne between Gradient Penalty and Spectral Normalization
+
+Gradient Penalty and Spectral Normalization are both methods used to enforce the Lipschitz constraint on the discriminator network in GANs, but they work in slightly different ways.
+
+Gradient Penalty method add a term to the loss function that penalizes the discriminator when the gradient of its output with respect to the input is too large. This is done by computing the gradient of the output logit with respect to an interpolation of real and fake images, and the norm of this gradient is calculated and compared to 1. The difference is squared and multiplied by a hyperparameter lambda, and the mean of this value is added to the loss.
+
+Spectral Normalization is a technique that normalizes the weight of the discriminator’s layer to have a spectral norm of 1. The spectral norm is the largest singular value of a weight matrix. The weights are being projected onto the unit sphere at each iteration, thus it enforces Lipschitz constraint on the discriminator.
+
+Both methods work to enforce the Lipschitz constraint on the discriminator by penalizing the network when it produces rapid changes in output for small changes in input, which can help stabilize the training process and improve the quality of the generated images.
+
+
+
+read more here 
+
+https://tech.preferred.jp/ja/blog/smoothness-and-stability-in-gans/
+
+https://jonathan-hui.medium.com/gan-spectral-normalization-893b6a4e8f53
+
+
+
+
+
+
+//////
+
+when having troubles in some cuda libraries like libcudnn.so.8 
+
+we have to add it to the path and make it run from the beging of the env
+
+by creatiung this file 
+
+nano $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
+i created on for tf38 env and for wlmce env_vars
+
+
+###############
+
+how to run the api 
+
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker", "src.api:app"]
+
+gunicorn --bind 0.0.0.0:8000 -k uvicorn.workers.UvicornWorker src.api:app
+
+gunicorn --bind 0.0.0.0:8000 -k uvicorn.workers.UvicornWorker src.api:app --reload
+
+
+####
+
+doin some experiments
+
+first one we train normal lr  
+
+second one is to change lr to lr 0.0005 0.0008 0.2 0.9 0.5
+parser.add_argument("--g_lr", type=float, default=0.0005, help="learning rate for generator")
+parser.add_argument("--d_lr", type=float, default=0.0008, help="learning rate for discriminator")
+parser.add_argument("--beta1", type=float, default=0.2, help="beta1 for Adam optimizer")
+parser.add_argument("--beta2", type=float, default=0.9, help="beta2 for Adam optimizer")
+parser.add_argument("--gpl", type=float, default=0.5, help="The gradient penalty lambda")
+
+
+thid one is using tanh instead of relu becuase it:s becoming nan
+changed 4 lines in the sagan_model where i changed the activation to tanh instead of relu
+with these parameters  lr 0.0005 0.0008 0.2 0.9 0.5
+
+
+after that we discovered that experiment 3 and adding tanh insteead of relu 
+didNT do the expecteed work , and it:s getting and generating different shapes 
+
+  
+
+
+logs are saved on this folder :
+
+/data1/data_alex/rico/akin experiments/
+
+
+-----
+
+now we need to monitor our work by using tensorboard for logging
+
+done and data are saved in logs/scalars
+
+i put data for the previous 3 experimenst in addition to 
+
+experiment 4
+relu again with lr 0.005 0.008 0.2 0.9 5
+
+here i turned back to relu because i discovered that relu cannot be replacable by tanh
+
+
+experiment 5
+
+fifth  experiment is done using default values
+
+with changing in adam optimizer  alpha value to 0.9
+
+lr = 0.001 0.004 0.9 0.9 10
+
+
+experiment 6
+
+6th  experiment is done using default values
+
+with changing in adam optimizer  alpha 1 value to 0.7
+
+lr = 0.001 0.004 0.7 0.9 10
+
+next should add samples and checkpoints in a folder according to timestamp
+
+i wrote a script for auto hyper-tuning it:s called hyper_tunning.sh
+this used to run different values for beta1 and beta2 and others
+while saving each logs in a specific folder according to the experiment name
+
+
+
+try to loop over beta2 and change it from 0.99 - .0.1 each time to 0
+
+  also using fid to measure the differecne between generaed model and their model
+
+
+
+
+inception training 
+
+
+
+
+
+python 
+
+fid calculation
+
+
+python -m pytorch_fid '/data1/data_alex/rico/akin experiments/samples_generator/pretrained checkpointscp-007000' "data/Akin_SAGAN_500/all_inone" --device cuda
+
+
+for dir in /data1/data_alex/rico/akin experiments/samples_generator/ ; do echo "$dir" done
+
+
+
+implement it in pytorch and try to reevaluate

@@ -1,0 +1,152 @@
+{
+ "shapes": [
+  {
+   "points": [
+    [
+     94,
+     503
+    ],
+    [
+     116,
+     532
+    ]
+   ],
+   "label": "number"
+  },
+  {
+   "points": [
+    [
+     21,
+     498
+    ],
+    [
+     26,
+     533
+    ]
+   ],
+   "label": "number"
+  },
+  {
+   "points": [
+    [
+     0,
+     494
+    ],
+    [
+     360,
+     569
+    ]
+   ],
+   "label": "number"
+  },
+  {
+   "points": [
+    [
+     0,
+     341
+    ],
+    [
+     360,
+     492
+    ]
+   ],
+   "label": "other"
+  },
+  {
+   "points": [
+    [
+     133,
+     296
+    ],
+    [
+     158,
+     326
+    ]
+   ],
+   "label": "other"
+  },
+  {
+   "points": [
+    [
+     0,
+     296
+    ],
+    [
+     132,
+     335
+    ]
+   ],
+   "label": "edit_string"
+  },
+  {
+   "points": [
+    [
+     164,
+     287
+    ],
+    [
+     355,
+     326
+    ]
+   ],
+   "label": "edit_string"
+  },
+  {
+   "points": [
+    [
+     350,
+     282
+    ],
+    [
+     360,
+     344
+    ]
+   ],
+   "label": "other"
+  },
+  {
+   "points": [
+    [
+     21,
+     273
+    ],
+    [
+     28,
+     308
+    ]
+   ],
+   "label": "top_bar"
+  },
+  {
+   "points": [
+    [
+     0,
+     224
+    ],
+    [
+     355,
+     263
+    ]
+   ],
+   "label": "edit_string"
+  },
+  {
+   "points": [
+    [
+     0,
+     0
+    ],
+    [
+     360,
+     204
+    ]
+   ],
+   "label": "edit_string"
+  }
+ ],
+ "imageHeight": 567,
+ "imageWidth": 360,
+ "flags": {
+  ".": true
+ }
+}

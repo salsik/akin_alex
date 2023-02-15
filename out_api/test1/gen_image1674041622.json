@@ -1,0 +1,74 @@
+{
+ "shapes": [
+  {
+   "points": [
+    [
+     66,
+     377
+    ],
+    [
+     298,
+     398
+    ]
+   ],
+   "label": "forgot"
+  },
+  {
+   "points": [
+    [
+     94,
+     278
+    ],
+    [
+     102,
+     285
+    ]
+   ],
+   "label": "rating"
+  },
+  {
+   "points": [
+    [
+     66,
+     251
+    ],
+    [
+     315,
+     335
+    ]
+   ],
+   "label": "box"
+  },
+  {
+   "points": [
+    [
+     99,
+     201
+    ],
+    [
+     242,
+     227
+    ]
+   ],
+   "label": "privacy"
+  },
+  {
+   "points": [
+    [
+     82,
+     98
+    ],
+    [
+     96,
+     105
+    ]
+   ],
+   "label": "forgot"
+  }
+ ],
+ "imageHeight": 567,
+ "imageWidth": 360,
+ "flags": {
+  ".": true
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "shapes": [
+  {
+   "points": [
+    [
+     9,
+     539
+    ],
+    [
+     349,
+     576
+    ]
+   ],
+   "label": "edit_string"
+  },
+  {
+   "points": [
+    [
+     319,
+     476
+    ],
+    [
+     349,
+     497
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     262,
+     462
+    ],
+    [
+     349,
+     479
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     15,
+     453
+    ],
+    [
+     73,
+     506
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     21,
+     431
+    ],
+    [
+     85,
+     447
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     274,
+     408
+    ],
+    [
+     304,
+     420
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     63,
+     408
+    ],
+    [
+     262,
+     420
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     26,
+     408
+    ],
+    [
+     40,
+     416
+    ]
+   ],
+   "label": "navigation_dots"
+  },
+  {
+   "points": [
+    [
+     291,
+     12
+    ],
+    [
+     315,
+     38
+    ]
+   ],
+   "label": "button"
+  },
+  {
+   "points": [
+    [
+     336,
+     8
+    ],
+    [
+     360,
+     38
+    ]
+   ],
+   "label": "name"
+  },
+  {
+   "points": [
+    [
+     9,
+     0
+    ],
+    [
+     45,
+     47
+    ]
+   ],
+   "label": "sign_up"
+  }
+ ],
+ "imageHeight": 567,
+ "imageWidth": 360,
+ "flags": {
+  ".": true
+ }
+}
